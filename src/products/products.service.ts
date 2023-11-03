@@ -49,8 +49,9 @@ export class ProductsService {
     if(isUUID(term)) {
       product = await this.productRepository.findOneBy({id:term})
     } else {
-      product = await this.productRepository.findOneBy({slug: term})
+      product = await this.productRepository.findOneBy({slug: term})  
     }
+    
 
     const productDB = await this.productRepository.findOneBy({term})
     if(!productDB) throw new NotFoundException(`Product ${term} not found`)
