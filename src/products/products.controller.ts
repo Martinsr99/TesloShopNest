@@ -14,8 +14,8 @@ export class ProductsController {
   }
 
   @Get()
-  findAll(@Query() PaginationDto) {
-    return this.productsService.findAll(PaginationDto);
+  findAll(@Query() paginationDto: PaginationDto) {
+    return this.productsService.findAll(paginationDto);
   }
 
   @Get(':term')
