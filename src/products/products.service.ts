@@ -20,7 +20,6 @@ export class ProductsService {
     
     @InjectRepository(ProductImage)
     private readonly productImageRepository: Repository<ProductImage>
-    
     ) {}
     
 
