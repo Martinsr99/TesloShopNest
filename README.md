@@ -12,9 +12,9 @@
 ```
 docker-compose up -d
 ```
-6. Ejecutar SEED
+6. Levantar proyecto: ```npm run start```
+7. Ejecutar SEED
 ```
 http://localhost:{PORT}/api/seed```
-7. Levantar proyecto: ```npm run start```
 
 @Martin Siles Reche  
