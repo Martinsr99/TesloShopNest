@@ -24,6 +24,9 @@ export class MessagesWsGateway implements OnGatewayConnection, OnGatewayDisconne
 
   @SubscribeMessage('message-from-client')
   handleMessageFromClient(client: Socket,payload:NewMessageDto) {
-    
+    this.wss.emit('message-from-server', {
+      fullName: 'yo',
+      message: payload.message ||'no-message!!'
+    })
   }
 }
